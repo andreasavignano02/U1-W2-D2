@@ -47,7 +47,9 @@ namespace U1_W1_D2
             imp.dataFine = DateTime.Now;
             imp.description = "ciaone";
             imp.compiti.Add(c1);
-          
+
+           
+         
 
             Console.WriteLine
                 (
@@ -57,10 +59,13 @@ namespace U1_W1_D2
                     $"Cognome : {p1.InformazioniPersonali.surname} " +
                     $"telefono : {p1.InformazioniPersonali.mobile} " +
                     $"email : {p1.InformazioniPersonali.email} " +
-                    $"compiti : {p1.Impieghi.compiti}"
+                    $"compiti : "
                     
                 );
-
+            foreach (Compiti item in imp.compiti)
+                {
+                 Console.WriteLine(item.compiti);
+                }
 
             Console.ReadLine();
         }
